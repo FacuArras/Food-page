@@ -102,13 +102,13 @@ header .nav-link:hover {
 
 /* home section ends */
 /* speciality section starts */
-#speciality .col-md-3 {
+#speciality .col-md-5 {
   cursor: pointer;
   overflow: hidden;
   position: relative;
 }
 
-#speciality .col-md-3 .speciality__image {
+#speciality .col-md-5 .speciality__image {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
@@ -118,12 +118,12 @@ header .nav-link:hover {
   left: 0;
 }
 
-#speciality .col-md-3:hover .content {
+#speciality .col-md-5:hover .content {
   -webkit-transform: translateY(130%);
           transform: translateY(130%);
 }
 
-#speciality .col-md-3:hover .speciality__image {
+#speciality .col-md-5:hover .speciality__image {
   top: 0;
 }
 

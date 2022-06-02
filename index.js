@@ -5,19 +5,19 @@ var swiper = new Swiper(".mySwiper", {
   grabCursor: true,
   breakpoints: {
     0: {
-        slidesPerView: 1,
+      slidesPerView: 1,
     },
-    620: {
+    576: {
       slidesPerView: 2,
     },
-    992: {
+    768: {
       slidesPerView: 3,
     },
   },
-/*   autoplay: {
+  autoplay: {
     delay: 2500,
     disableOnInteraction: false,
-  }, */
+  },
   pagination: {
     el: ".swiper-pagination",
     dynamicBullets: true,
