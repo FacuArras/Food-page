@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap");
+
+/* variables starts */
+$red: #ff3838;
+$box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+/* variables ends */
+
+/* bootstrap modifiers starts */
+$primary: $red;
+$btn-padding-x: 2rem;
+$btn-font-size: 1.1rem;
+/* bootstrap modifiers ends */
+
+* {
+  font-family: "Nunito", sans-serif;
+  box-sizing: border-box;
+  text-decoration: none !important;
+  transition: all 0.2s linear;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  background: #f7f7f7;
+}
+
+/* components modifiers starts */
+a {
+  &:hover {
+    color: white !important;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background: $primary !important;
+}
+/* components modifiers ends */
+
+/* header section starts */
+header {
+  box-shadow: $box-shadow;
+  button {
+    box-shadow: none !important;
+  }
+  .nav-link:hover {
+    color: $primary !important;
+  }
+}
+/* header section ends */
+
+/* home section starts */
+#home {
+  background-size: cover;
+  background-position: center;
+
+  h1 {
+    font-size: 2.7rem;
+    @media (min-width: 1200px) {
+      font-size: 3rem;
+    }
+  }
+
+  img {
+    animation: float 3s linear infinite;
+    max-height: 360px;
+    @media (min-width: 992px) {
+      width: auto !important;
+    }
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0rem);
+    }
+    50% {
+      transform: translateY(3rem);
+    }
+  }
+}
+/* home section ends */
+
+/* speciality section starts */
+#speciality {
+  .col-md-3 {
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    .speciality__image {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: -100%;
+      left: 0;
+    }
+    &:hover {
+      .content {
+        transform: translateY(130%);
+      }
+      .speciality__image {
+        top: 0;
+      }
+    }
+  }
+}
+/* speciality section ends */
+
+/* popular section starts */
+#popular {
+  .popular__container {
+    
+    .popular__image-container {
+      position: relative;
+      img {
+        max-height: 240px;
+        object-fit: cover;
+      }
+      div {
+        position: absolute;
+        top: 0.5rem;
+        left: 0.5rem;
+      }
+    }
+  }
+}
+/* popular section ends */
+
+@import "./node_modules/bootstrap/scss/bootstrap";
