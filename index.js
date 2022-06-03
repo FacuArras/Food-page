@@ -5,7 +5,7 @@ var swiper = new Swiper(".mySwiper", {
   grabCursor: true,
   breakpoints: {
     0: {
-      slidesPerView: 1,
+      slidesPerView: 1.2,
     },
     576: {
       slidesPerView: 2,
