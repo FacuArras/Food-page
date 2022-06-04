@@ -1,3 +1,9 @@
+let myCart = document.querySelector("#myCart");
+
+document.querySelector("#myCart-btn").onclick = () => {
+  myCart.classList.toggle("active");
+};
+
 var swiper = new Swiper(".mySwiper", {
   spaceBetween: 20,
   centeredSlides: true,

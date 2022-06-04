@@ -7,8 +7,11 @@ $box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 
 /* bootstrap modifiers starts */
 $primary: $red;
+$secondary: #eee;
 $btn-padding-x: 2rem;
 $btn-font-size: 1.1rem;
+$font-size-base: 1rem;
+$h1-font-size: $font-size-base * 2.8;
 /* bootstrap modifiers ends */
 
 * {
@@ -35,6 +38,12 @@ a {
   }
 }
 
+button {
+  i:hover {
+    color: $primary !important;
+  }
+}
+
 .swiper-pagination-bullet-active {
   background: $primary !important;
 }
@@ -48,6 +57,30 @@ header {
   }
   .nav-link:hover {
     color: $primary !important;
+  }
+
+  #myCart {
+    z-index: 900;
+    height: auto;
+    width: 100%;
+    max-width: 25rem;
+    top: 65px;
+    right: -100%;
+    overflow: auto;
+    .myCart__body {
+      i:hover {
+        cursor: pointer;
+        color: $primary !important;
+      }
+
+      .btn-outline-primary:hover {
+        color: white !important;
+      }
+    }
+    &.active {
+      right: 1%;
+      transition: 0.4s linear;
+    }
   }
 }
 /* header section ends */
@@ -122,11 +155,14 @@ header {
       div {
         position: absolute;
         top: 0.5rem;
-        left: 0.5rem;
+        right: 0.8rem;
+        &:hover {
+          color: $primary !important;
+        }
       }
     }
   }
 }
 /* popular section ends */
 
-@import "./node_modules/bootstrap/scss/bootstrap";
+@import "../food/node_modules/bootstrap/scss/bootstrap.scss";
