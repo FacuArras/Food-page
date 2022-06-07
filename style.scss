@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
 
 /* variables starts */
 $red: #ff3838;
@@ -164,5 +165,59 @@ header {
   }
 }
 /* popular section ends */
+
+/* sales section starts */
+#banner {
+  .row-banner {
+    height: 20rem;
+    background: url(../images/row-banner.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 1rem;
+    .row-banner__content {
+      position: absolute;
+      top: 50%;
+      left: 5%;
+      transform: translateY(-50%);
+    }
+  }
+  .banner {
+    position: relative;
+    overflow: hidden;
+    height: 35rem;
+    div {
+      position: absolute;
+      top: 0.3rem;
+    }
+    img {
+      object-fit: cover;
+      border-radius: 1rem;
+    }
+  }
+}
+/* sales section ends */
+
+/* menu section starts */
+#menu {
+  .menu__container {
+    .menu__image-container {
+      position: relative;
+      img {
+        max-height: 240px;
+        object-fit: cover;
+      }
+      div {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.8rem;
+        &:hover {
+          color: $primary !important;
+        }
+      }
+    }
+  }
+}
+/* menu section ends */
 
 @import "../food/node_modules/bootstrap/scss/bootstrap.scss";
